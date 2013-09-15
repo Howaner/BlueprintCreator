@@ -1,0 +1,32 @@
+name: BlueprintCreator
+version: 1.0
+author: Howaner
+description: This Plugin can make a Blueprint of a Structure
+main: de.howaner.BlueprintCreator.BlueprintPlugin
+
+commands:
+  blueprint:
+    description: Blueprint Management
+    usage: /<command> <create|texture>
+    aliases: [create,texture]
+permissions:
+  BlueprintCreator.*:
+    description: All Permissions
+    children:
+      BlueprintCreator.create: true
+      BlueprintCreator.reload: true
+      BlueprintCreator.texture.install: true
+      BlueprintCreator.texture.list: true
+    default: op
+  BlueprintCreator.create:
+    description: Bauplan Erstellen
+    default: op
+  BlueprintCreator.reload:
+    description: Plugin reload
+    default: op
+  BlueprintCreator.texture.install:
+    description: Install a Texture
+    default: op
+  BlueprintCreator.texture.list:
+    description: List all Textures
+    default: op
